@@ -1,0 +1,7 @@
+Running: xsim.dir/logic_gate_or_tb_behav/xsimk.exe -simmode gui -wdb logic_gate_or_tb_behav.wdb -simrunnum 0 -socket 51571
+Design successfully loaded
+Design Loading Memory Usage: 11296 KB (Peak: 11296 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 11868 KB (Peak: 11868 KB)
+Simulation CPU Usage: 46 ms

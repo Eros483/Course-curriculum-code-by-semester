@@ -1,0 +1,9 @@
+tensorflow==2.9.3
+numpy==1.24.4
+neurite==0.2
+voxelmorph==0.2
+pybind11>=2.12
+matplotlib
+scipy
+h5py
+nibabel

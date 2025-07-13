@@ -1,0 +1,69 @@
+.data
+array: .space 48 # 12 integers, each 4 bytes
+input1: .asciiz "Enter the number of elements: (terminate with zero)"
+input2: .asciiz "Enter elements: "
+
+.text
+main:
+    la $a0, input1
+    li $v0, 4
+    syscall
+    
+    li $v0, 5
+    syscall
+    move $t2, $v0 #now we can operate with removing the nth index of the array
+    #n=quotient + remainder of (n/2) + 1
+    li $t4, 2
+    
+    la $a0, input2
+    li $v0, 4
+    syscall
+
+    la $t0, array # load address of array
+    li $t1, 0 # index
+loop_read:
+    beq $t1, 12, end_read
+    li $v0, 5 # read integer
+    syscall
+    beqz $v0, end_read
+    sw $v0, 0($t0) # store integer in array
+    addi $t1, $t1, 1
+    mul $t3, $t1, 4
+    add $t0, $t0, $t3
+    
+    j loop_read
+end_read:
+    #array initialised
+    
+remove_elementIndex:
+	div $t2, $t4
+	mfhi $t2
+	addi $t4, $t2, 0
+	mflo $t2
+	addi $t4, $t2, $t4
+	
+	li $t1,0
+removingElements:
+	blez $t4, 1, end
+	subi $t0, $t0, 48 #returning to first point of array
+	mul $t5, $t4, 4
+	add $t0, $t0, $t5
+	li 0($t0), 0
+	subi $t4, $t4, 1
+	j printArray
+	j removingElements
+	
+printArray:
+	beq $t0, 0, skipElement
+	
+	
+skipElement:
+	addi $t0, $t0, 4
+	j printArray
+	
+#printing each array every time, with skipping every element tht is zero
+	
+	 
+	
+    
+    

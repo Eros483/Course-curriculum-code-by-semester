@@ -1,0 +1,69 @@
+# Initialize data segment
+.data
+array: .space 48 # max size 12, each element is 4 bytes
+size: .word 0
+
+# Initialize text segment
+.text
+main:
+    # Get user input integer
+    li $v0, 5
+    syscall
+    move $t0, $v0
+
+    # Initialize array index
+    li $t1, 0
+
+loop:
+    # Get array element from user
+    li $v0, 5
+    syscall
+    move $t2, $v0
+
+    # Store array element
+    sw $t2, array($t1)
+
+    # Increment array index
+    addi $t1, $t1, 1
+
+    # Check if array element is 0 or array size is 12
+    beq $t2, $0, end_loop
+    blt $t1, 12, loop
+
+end_loop:
+    # Store array size
+    move $t3, $t1
+
+    # Divide user input integer by 2
+    div $t0, $t0, 2
+    mfhi $t5 # remainder
+    mflo $t6 # quotient
+
+    # Calculate sum
+    add $t4, $t6, $t5
+    addi $t4, $t4, 1
+
+loop2:
+    # Remove element at t4 index in the array
+    sub $t4, $t4, 1
+    mul $t4, $t4, 4
+    la $t5, array
+    sub $t5, $t5, $t4
+    sw $0, 0($t5)
+
+    # Print array
+    la $a0, array
+    li $v0, 1
+    syscall
+
+    # Decrement t4
+    sub $t4, $t4, 1
+
+    # Check if array size is 1
+    beq $t3, 1, end
+    j loop2
+
+end:
+    # Exit program
+    li $v0, 10
+    syscall

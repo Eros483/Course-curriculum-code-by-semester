@@ -1,0 +1,14 @@
+bfs(v)
+{
+    q.createQueue();
+    q.enque(v);//mark v as visited, perhaps maybe with each node i can set up another condition to check that with a binary?
+    while (!q.isEmpty())
+    {
+        w=q.dequeue();
+        for(//each unvisited node adjacent to w)
+        {
+            q.enqueue(u);
+            //mark u as visited similiar to above?
+        }
+    }
+}

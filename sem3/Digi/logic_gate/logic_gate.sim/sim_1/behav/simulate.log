@@ -1,0 +1,46 @@
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+Time: 10000 | Register File Contents:
+RF[0] =          0
+RF[1] =          x
+RF[2] =          6
+RF[3] =          9
+RF[4] =          x
+RF[5] =          x
+RF[6] =          x
+RF[7] =          x
+-------------------------------
+space
+Time: 20000 | Register File Contents:
+RF[0] =          0
+RF[1] =          x
+RF[2] =         42
+RF[3] =          9
+RF[4] =          x
+RF[5] =          x
+RF[6] =          x
+RF[7] =          x
+-------------------------------
+space
+Time: 30000 | Register File Contents:
+RF[0] =          0
+RF[1] =          x
+RF[2] =         42
+RF[3] =          9
+RF[4] =          x
+RF[5] =          x
+RF[6] =          x
+RF[7] =          x
+-------------------------------
+space
+Time: 40000 | Register File Contents:
+RF[0] =          0
+RF[1] =          x
+RF[2] =         42
+RF[3] =          9
+RF[4] =          x
+RF[5] =          x
+RF[6] =          x
+RF[7] =          x
+-------------------------------
+space

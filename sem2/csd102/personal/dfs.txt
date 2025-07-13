@@ -1,0 +1,10 @@
+//dfs similiar to pre-order
+dfs(v)
+{
+    //print v;
+    //mark v as visisted
+    for (//each unvisited node)
+    {
+        dfs(u);
+    }
+}

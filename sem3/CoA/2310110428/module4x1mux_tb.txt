@@ -1,0 +1,38 @@
+module tb_mux4x1;
+    reg [3:0] data;         // Test input data
+    reg [1:0] sel;          // Test select signal
+    wire y;                 // Output from the mux
+
+    // Instantiate the 4x1 MUX
+    mux4x1 uut (
+        .data(data),
+        .sel(sel),
+        .y(y)
+    );
+
+    initial begin
+        // Test case 1: Select data[0]
+        data = 4'b1010; // Input data
+        sel = 2'b00;    // Select line
+        #10;            // Wait for 10 time units
+        $display("sel = %b, output = %b", sel, y); // Expected output: 0
+
+        // Test case 2: Select data[1]
+        sel = 2'b01;    // Select line
+        #10;
+        $display("sel = %b, output = %b", sel, y); // Expected output: 1
+
+        // Test case 3: Select data[2]
+        sel = 2'b10;    // Select line
+        #10;
+        $display("sel = %b, output = %b", sel, y); // Expected output: 0
+
+        // Test case 4: Select data[3]
+        sel = 2'b11;    // Select line
+        #10;
+        $display("sel = %b, output = %b", sel, y); // Expected output: 1
+
+        // End simulation
+        $finish;
+    end
+endmodule

@@ -1,0 +1,5 @@
+The temp conversion from fahrenheit to celsius is as follows
+0 fahrenheit in celsius is -17.78
+20 fahrenheit in celsius is -6.67
+40 fahrenheit in celsius is 4.44
+60 fahrenheit in celsius is 15.56

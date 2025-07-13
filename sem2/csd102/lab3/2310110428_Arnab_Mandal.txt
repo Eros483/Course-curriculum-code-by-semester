@@ -1,0 +1,347 @@
+Roll no: 2310110428
+Name: Arnab Mandal
+
+Program-1:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Define the structure for a node in the linked list
+struct Node {
+    int num;
+    struct Node* nextptr;
+};
+
+// Global head pointer for the linked list
+struct Node* head = NULL;
+
+// Function to create a linked list with n nodes
+void createNodeList(int n);
+void displayList();
+
+// Function to display the linked list
+int main() {
+    int n;
+
+    // Read the number of nodes from the user
+    scanf("%d", &n);
+
+    // Create the linked list
+    createNodeList(n);
+
+    // Display the linked list
+    displayList();
+
+    return 0;
+}
+
+void createNodeList(int n) {
+    struct Node* temp = NULL; // Temporary node to traverse the list
+
+    // Create n nodes and add them to the linked list
+    for (int i = 0; i < n; i++) {
+        // Allocate memory for a new node
+        struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+        
+        // Read data for the node from the user
+        scanf("%d", &(newNode->num));
+        
+        // Set the next pointer of the new node to NULL
+        newNode->nextptr = NULL;
+
+        // If it's the first node, set it as the head of the list
+        if (head == NULL) {
+            head = newNode;
+        } else {
+            // Otherwise, traverse the list to the last node and link the new node
+            temp = head;
+            while (temp->nextptr != NULL) {
+                temp = temp->nextptr;
+            }
+            temp->nextptr = newNode;
+        }
+    }
+}
+
+void displayList() {
+    struct Node* current = head; // Start at the head of the list
+
+    // Traverse the linked list and print the data of each node
+    while (current != NULL) {
+        printf("%d ", current->num);
+        current = current->nextptr;
+    }
+    printf("\n");
+}
+
+
+Program-2:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int num;
+    struct node*nxtptr;
+} *stnode;
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int array[n];
+    for (int i=0; i<n; ++i)
+    {
+        scanf("%d", &array[i]);
+    }
+    /*for (int j=0; j<n; ++j)
+    {
+        printf("%d\n", array[j]);
+    }*/
+    struct node*nodeArray[n];
+    for (int k=0; k<n; k++)
+    {
+        nodeArray[k]=(struct node*)malloc(sizeof(struct node));
+        if (k!=n-1)
+        {
+            nodeArray[k]->nxtptr=nodeArray[k+1];
+        }
+        else
+        {
+            nodeArray[k]->nxtptr=NULL;
+        }
+        nodeArray[k]->num=array[k];
+    }
+
+    struct node*current=nodeArray[n-1];
+
+    for (int j=n-1; j>0; --j)
+    {
+        if  (j!=0)
+        {
+            nodeArray[j]->nxtptr=nodeArray[j-1];
+        }
+        else
+        {
+            nodeArray[j]->nxtptr=NULL;
+        }
+    }
+
+    while (current != NULL) 
+    {
+        printf("%d ", current->num);
+        current = current->nxtptr;
+    }
+
+    for (int v=0; v<n; v++)
+    {
+        free(nodeArray[v]);
+    }    
+}
+
+Program-3:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare(const void *a, const void *b);
+
+struct Node
+{
+    int data;
+    struct Node*next;
+};
+
+int main()
+{
+    int n1, n2;
+
+    scanf("%d", &n1);
+
+    int *array1=(int*)malloc(n1*sizeof(int));
+
+    
+    if (n1!=0)
+    {
+        for (int i=0; i<n1; i++)
+        {
+            scanf("%d", &array1[i]);
+        }
+    }
+
+    scanf("%d", &n2);
+
+    int *array2=(int*)malloc(n2*sizeof(int));
+
+    for (int j=0; j<n2; j++)
+    {
+        scanf("%d", &array2[j]);
+    }
+
+    struct Node*NodeArray1[n1];
+    struct Node*NodeArray2[n2];
+    
+    if (n1!=0)
+    {
+        for (int k=0; k<n1; ++k)//creating first ll
+            {
+            NodeArray1[k]=(struct Node*)malloc(sizeof(struct Node));
+            NodeArray1[k]->data=array1[k];
+            NodeArray1[k]->next=NULL;
+            if (k>0)
+                {
+                NodeArray1[k-1]->next=NodeArray1[k];
+                }
+            }
+    }
+    else
+    {
+        NodeArray1[0]=(struct Node*)malloc(sizeof(struct Node));
+        NodeArray1[0]->data=0;
+        NodeArray1[0]->next=NULL;
+    }
+
+    for (int l=0; l<n2; ++l)
+    {
+        NodeArray2[l]=(struct Node*)malloc(sizeof(struct Node));
+        NodeArray2[l]->data=array2[l];
+        NodeArray2[l]->next=NULL;
+        if (l>0)
+        {
+            NodeArray2[l-1]->next=NodeArray2[l];
+        }        
+    }
+
+    if (n1!=0)
+    {
+        NodeArray1[n1-1]->next=NodeArray2[0];
+    }
+    else
+    {
+        NodeArray1[0]->next=NodeArray2[0];
+    }
+    struct Node*current=NodeArray1[0];
+
+    int *sort=(int*)malloc((n1+n2)*sizeof(int));
+    int z=0;
+
+    while (current!=NULL)
+    {
+        if (n1==0&&current->data==NodeArray1[0]->data)
+        {
+            current=current->next;
+            continue;
+        }
+        sort[z++]=current->data;
+        current=current->next;
+    }
+
+    qsort(sort, n1+n2, sizeof(int), compare);
+
+    struct Node*current1=NodeArray1[0];
+    int x=0;
+
+    while (current1!=NULL)
+    {
+        if (n1==0&&current1->data==NodeArray1[0]->data)
+        {
+            current1=current1->next;
+            continue;
+        }
+        current1->data=sort[x++];
+        current1=current1->next;
+    }
+
+    struct Node*current2=NodeArray1[0];
+
+    while (current2!=NULL)
+    {
+        if (n1==0&&current2->data==NodeArray1[0]->data)
+        {
+            current2=current2->next;
+            continue;
+        }
+        printf("%d ", current2->data);
+        current2=current2->next;
+    }
+
+    free(array1);
+    free(array2);
+    for (int u=0; u<n1; u++)
+    {
+        free(NodeArray1[u]);
+    }
+    for (int v=0; v<n2; v++)
+    {
+        free(NodeArray2[v]);
+    }
+}
+
+int compare(const void *a, const void *b)
+{
+    return (*(int*)a-*(int*)b);
+}
+
+Program-4: 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node{
+    int data;
+    struct node*next;
+};
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int *array=(int*)malloc(n*sizeof(int));
+    for (int a=0; a<n; a++)
+    {
+        scanf("%d", &array[a]);
+    }
+    struct node*nodeArray[n];
+    for (int b=0; b<n; b++)
+    {
+        nodeArray[b]=(struct node*)malloc(sizeof(struct node));
+        if (b!=n-1)
+        {
+            nodeArray[b]->next=nodeArray[b+1];
+        }
+        else
+        {
+            nodeArray[b]->next=NULL;
+        }
+        nodeArray[b]->data=array[b];
+    }
+    int flag=0;
+    for (int k=0; k<n/2; k++)
+    {
+        if (n%2!=0)
+        {
+            if (k==(n+1)/2)
+            {
+                break;
+            }
+        }
+        if (nodeArray[k]->data==nodeArray[n-1-k]->data)
+        {
+            ;
+        }
+        else
+        {
+            flag=1;
+            break;
+        }    
+    }
+    if (flag==0)
+    {
+        printf("YES");
+    }
+    else
+    {
+        printf("NO");
+    }
+}

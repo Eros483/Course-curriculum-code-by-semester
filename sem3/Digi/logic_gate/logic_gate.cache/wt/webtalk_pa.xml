@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Wed Nov 20 18:47:42 2024">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="b1385154a2304da4820b444e554c3c44" type="ProjectID"/>
+<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="AddSources" value="3" type="JavaHandler"/>
+<property name="CloseProject" value="5" type="JavaHandler"/>
+<property name="NewProject" value="2" type="JavaHandler"/>
+<property name="OpenProject" value="2" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
+<property name="ShowView" value="1" type="JavaHandler"/>
+<property name="SimulationClose" value="2" type="JavaHandler"/>
+<property name="SimulationRun" value="31" type="JavaHandler"/>
+<property name="WaveformSaveConfiguration" value="1" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="5" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, tb_mux4x1 (logic_gate_tb.v" value="6" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="6" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, D:/collegeCode/sem3/Digi/logic_gate/logic_gate.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.LogMonitor_MONITOR, 344, 58" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="6" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseWorkspace_FLOAT, Float" value="1" type="GuiResourceData"/>
+<property name="RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String" value="17" type="GuiResourceData"/>
+<property name="RDIResource.GraphicalView_ZOOM_FIT, Waveform Viewer_zoom_fit" value="5" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 242, 10" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 429, 65" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, Untitled 5" value="1" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, Data2[31:0]], 4" value="1" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, Data2[31:0]], 7" value="1" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, Read1[5:0]], 0" value="2" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, RegWrite], 4, false" value="2" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, RegWrite], 4, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, WriteData[31:0]], 3" value="6" type="GuiResourceData"/>
+<property name="logic_gate.v, 123, 232" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 141, 234" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 143, 144" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 153, 165" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 157, 151" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 168, 259" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 187, 244" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 236, 189" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 237, 207" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 265, 225" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 28, 398" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 302, 103" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 31, 206" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 333, 87" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 337, 331" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 351, 406" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 422, 239" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 469, 402" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 494, 348" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 498, 385" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 542, 396" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 547, 339" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 553, 213" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 56, 390" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 577, 375" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 67, 400" value="1" type="GuiResourceData"/>
+<property name="logic_gate.v, 713, 316" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 100, 176" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 126, 234" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 126, 389" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 126, 77" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 202, 181" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 218, 309" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 260, 273" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 264, 234" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 315, 306" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 38, 95" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 56, 299" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 57, 300" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 73, 84" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 79, 129" value="1" type="GuiResourceData"/>
+<property name="logic_gate_tb.v, 93, 382" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="13" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="6" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>

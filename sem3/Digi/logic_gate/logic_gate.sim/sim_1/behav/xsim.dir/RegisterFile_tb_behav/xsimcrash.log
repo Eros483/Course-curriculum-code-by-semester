@@ -1,0 +1,44 @@
+Unable to capture context for thread 20240 in process 5632, can not generate back trace
+Unable to capture context for thread 20832 in process 5632, can not generate back trace
+Unable to capture context for thread 22412 in process 5632, can not generate back trace
+Unable to capture context for thread 21088 in process 5632, can not generate back trace
+Exception at PC 0x00007FFD19A2837A
+Unable to capture context for thread 20240 in process 5632, can not generate back trace
+Unable to capture context for thread 20832 in process 5632, can not generate back trace
+Unable to capture context for thread 22412 in process 5632, can not generate back trace
+Unable to capture context for thread 21088 in process 5632, can not generate back trace
+Exception at PC 0x00007FFC32B8BB93
+Printing stacktrace...
+
+Unable to capture context for thread 19736 in process 5632, can not generate back trace
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+[0]  [0x00007FFC32B8BB93]
+[1]  [0x00007FFC32B8BB93]
+[2]  [0x00007FFC32B8B4A1]
+[3]  [0x00007FFC32B8B459]
+[4]  [0x00007FFC32B719FE]
+[5]  [0x00007FFC32B70ED1]
+[6]  [0x00007FFC32B70D76]
+[7]  [0x00007FFC32B179F6]
+[8]  [0x00007FFC32B07AFB]
+[9]  [0x00007FFC32C2E90A]
+[10]  [0x00007FFC32C49F87]
+[11]  [0x00007FFC32C4A05F]
+[12] (BaseThreadInitThunk+0x17) [0x00007FFD1BCDE8D7]
+[13] (RtlUserThreadStart+0x2c) [0x00007FFD1C49FBCC]
+Done
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A
+Exception at PC 0x00007FFD19A2837A

@@ -1,0 +1,64 @@
+Verilog code:
+
+module mux4to1 (
+    input [3:0] A,        // 4-bit input A
+    input [3:0] B,        // 4-bit input B
+    input [1:0] sel,      // 2-bit selection input
+    output reg [3:0] Y    // 4-bit output
+);
+
+    always @(*) begin
+        case (sel)
+            2'b00: Y = A & B;      // AND operation
+            2'b01: Y = A | B;      // OR operation
+            2'b10: Y = ~A;         // Complement of A
+            2'b11: Y = A ^ B;      // XOR operation
+            default: Y = 4'b0000;  // Default case (should not occur)
+        endcase
+    end
+
+endmodule
+
+testbench:
+
+module tb_mux4to1;
+
+    reg [3:0] A;         // 4-bit input A
+    reg [3:0] B;         // 4-bit input B
+    reg [1:0] sel;       // 2-bit selection input
+    wire [3:0] Y;        // 4-bit output
+
+    // Instantiate the multiplexer
+    mux4to1 uut (
+        .A(A),
+        .B(B),
+        .sel(sel),
+        .Y(Y)
+    );
+
+    initial begin
+        // Test case 1: AND operation
+        A = 4'b1100; B = 4'b1010; sel = 2'b00;
+        #10;
+        $display("AND: A = %b, B = %b, Y = %b", A, B, Y);
+
+        // Test case 2: OR operation
+        A = 4'b1100; B = 4'b1010; sel = 2'b01;
+        #10;
+        $display("OR: A = %b, B = %b, Y = %b", A, B, Y);
+
+        // Test case 3: Complement of A
+        A = 4'b1100; B = 4'b1010; sel = 2'b10;
+        #10;
+        $display("Complement: A = %b, Y = %b", A, Y);
+
+        // Test case 4: XOR operation
+        A = 4'b1100; B = 4'b1010; sel = 2'b11;
+        #10;
+        $display("XOR: A = %b, B = %b, Y = %b", A, B, Y);
+
+        // Finish simulation
+        $finish;
+    end
+
+endmodule

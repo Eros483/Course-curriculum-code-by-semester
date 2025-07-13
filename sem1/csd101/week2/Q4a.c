@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main ()
+{
+int a, b, c, d;
+a=8;
+b=3;
+c=-5;
+printf ("The answer for 4a is \n");
+(d)=(2)*(b+3)*(a-c);
+printf ("%d\n", d);
+return 0;
+}
+
+

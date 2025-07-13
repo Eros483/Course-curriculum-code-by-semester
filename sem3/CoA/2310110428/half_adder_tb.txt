@@ -1,0 +1,27 @@
+module half_adder_tb();
+    reg a, b;            // Declare registers for inputs
+    wire sum, carry;    // Declare wires for outputs
+
+    // Instantiate the half adder
+    half_adder1 h1(a, b, sum, carry);
+
+    initial begin
+        // Test case 1
+        a = 1'b0; b = 1'b0; // Input: 0 + 0
+        #10;                // Wait for 10 time units
+
+        // Test case 2
+        a = 1'b0; b = 1'b1; // Input: 0 + 1
+        #10;                // Wait for 10 time units
+
+        // Test case 3
+        a = 1'b1; b = 1'b0; // Input: 1 + 0
+        #10;                // Wait for 10 time units
+
+        // Test case 4
+        a = 1'b1; b = 1'b1; // Input: 1 + 1
+        #10;                // Wait for 10 time units
+
+        $stop;             // Stop the simulation
+    end
+endmodule

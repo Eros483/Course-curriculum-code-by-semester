@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/collegeCode/sem3/Digi/logic_gate/logic_gate.srcs/sources_1/new/logic_gate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/collegeCode/sem3/Digi/logic_gate/logic_gate.srcs/sources_1/new/logic_gate_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/collegeCode/sem3/Digi/logic_gate/logic_gate.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
